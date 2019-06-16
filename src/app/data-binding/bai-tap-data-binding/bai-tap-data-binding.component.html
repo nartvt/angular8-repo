@@ -1,0 +1,19 @@
+
+<form action="#">
+  <div class="form-group col-md-4">
+    <label for="email">Email:</label>
+    <input type="text" class="form-control"  [value]="email" 
+    [(ngModel)] ="email" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group col-md-4">
+    <label>FullName:</label>
+    <input type="text" class="form-control" [value]="fullname"  #Fullname [value]="fullname">
+  </div>
+  <button type="submit" class="btn btn-success" (click)="eventBinding(Fullname.value)">Submit</button>
+
+  
+</form>
+
+<p>Email: {{email}}</p>
+<p>FullName: {{fullname}}</p>
+

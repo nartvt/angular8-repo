@@ -17,6 +17,9 @@ import { Baitap2CardsComponent } from './baitap2/baitap2-cards/baitap2-cards.com
 import { Baitap2FooterComponent } from './baitap2/baitap2-footer/baitap2-footer.component';
 import { Baitap2ItemCardComponent } from './baitap2/baitap2-cards/baitap2-item-card/baitap2-item-card.component';
 import { Baitap3Module } from './baitap3/baitap3.module';
+import {DataBindingModule} from './data-binding/data-binding.module';
+import { StructualDirectiveModule } from './structual-directive/structual-directive.module';
+import { AttributeDirectiveModule } from './attribute-directive/attribute-directive.module';
 
 @NgModule({
   declarations: [
@@ -34,11 +37,14 @@ import { Baitap3Module } from './baitap3/baitap3.module';
     Baitap2ContentContactComponent,
     Baitap2CardsComponent,
     Baitap2FooterComponent,
-    Baitap2ItemCardComponent
+    Baitap2ItemCardComponent,
   ],
   imports: [
     BrowserModule,
-    Baitap3Module
+    Baitap3Module,
+    DataBindingModule,
+    StructualDirectiveModule,
+    AttributeDirectiveModule
   ],
   providers: [],
   bootstrap: [AppComponent]

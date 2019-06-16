@@ -1,0 +1,20 @@
+<h1 style="color: red">*ngIf</h1>
+<div *ngIf="isShow"> Angular8 </div>
+<button class="btn btn-danger" (click)="hidden()">Hidden</button>
+<button class="btn btn-success" (click)="show()">Show</button>
+
+<br>
+<br>
+
+<div class="mt-3" *ngIf="statusLogin; else contentElse">
+  <button class="btn btn-primary" (click)="logOut()">LogOut</button>
+  <h1>Hello Angular8</h1>
+</div>
+
+<div>
+  <br>
+  <ng-template #contentElse>
+    <button class="btn btn-success" (click)="login()">Login</button>
+    <h1>Please Login</h1>
+  </ng-template>
+</div>

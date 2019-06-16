@@ -1,0 +1,38 @@
+<form action="#" >
+  <div class="col-4">
+    <div class="form-group">
+      <label>Ma San Pham</label>
+      <input type="text" class="form-control" id="masp" #mSanPham>
+    </div>
+    <div class="form-group">
+      <label>Ten San Pham</label>
+      <input type="text" class="form-control" id="tensp" #tSanPham>
+    </div>
+    <div class="form-group">
+      <label>Gia</label>
+      <input type="text" class="form-control" id="giasp" #gSanPham>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary"
+    (click)="getInfoSanPham(mSanPham.value,tSanPham.value,gSanPham.value)">Submit</button>
+</form>
+<table class="table">
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Ma San Pham</th>
+      <th>Ten San Pham</th>
+      <th>Gia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <<ng-container  *ngIf="sanPhams!=null">
+      <tr *ngFor="let item of sanPhams; let STT = index" [ngClass]="{bgColor: (STT+1)%2===0}">
+        <td>{{STT+1}}</td>
+        <td>{{item.maSanPham}}</td>
+        <td>{{item.tenSanPham}}</td>
+        <td>{{item.giaSanPham}}</td>
+      </tr>
+  </ng-container>
+  </tbody>
+</table>
