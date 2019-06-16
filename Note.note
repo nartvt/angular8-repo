@@ -1,0 +1,20 @@
+# Module
+# Component
+# Data Binding
+ + OneWay Binding: 
+  - Interpolation
+  - Properties Binding
+  - Event Binding
+ + Twoway Binding
+
+# Structual Binding
+ + ngIf
+ + ngFor
+ + ngSwitch
+
+# Attribute-directive
+ + ngClass
+ + ngStyle
+ + ngNonBindable
+ + ngTemplate
+# ng-container
