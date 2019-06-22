@@ -44,4 +44,7 @@ export class BaitapThemsanphamComponent implements OnInit {
       this.sanPhams.push(sp);
     }
   }
+  deleteSanPham(item) {
+    
+  }
 }
