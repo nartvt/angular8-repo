@@ -20,6 +20,9 @@ import { Baitap3Module } from './baitap3/baitap3.module';
 import {DataBindingModule} from './data-binding/data-binding.module';
 import { StructualDirectiveModule } from './structual-directive/structual-directive.module';
 import { AttributeDirectiveModule } from './attribute-directive/attribute-directive.module';
+import { NgContentModule } from './ng-content/ng-content.module';
+import { InteractionModule } from './interaction/interaction.module';
+import { TicketBookBusModule } from './ticket-book-bus/ticket-book-bus.module';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,11 @@ import { AttributeDirectiveModule } from './attribute-directive/attribute-direct
     Baitap3Module,
     DataBindingModule,
     StructualDirectiveModule,
-    AttributeDirectiveModule
+    AttributeDirectiveModule,
+    NgContentModule,
+    InteractionModule,
+    TicketBookBusModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

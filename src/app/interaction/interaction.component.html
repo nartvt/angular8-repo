@@ -1,0 +1,27 @@
+<h1 style="color: red">*Interaction</h1>
+<app-movies-collection></app-movies-collection>
+<div class="container">
+    <h3>Thêm phim</h3>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-group">
+                <label for="usr">Mã phim:</label>
+                <input type="text" class="form-control" #maPhim>
+            </div>
+            <div class="form-group">
+                <label for="usr">Tên phim:</label>
+                <input type="text" class="form-control" #tenPhim>
+            </div>
+            <div class="form-group">
+                <label for="usr">Giá phim:</label>
+                <input type="text" class="form-control" #giaPhim>
+            </div>
+            <div class="form-group">
+                <label for="usr">Ảnh đại diện:</label>
+                <input type="text" class="form-control" #anhPhim>
+            </div>
+            <button class="btn btn-success" (click)="insertMovie(maPhim.value,tenPhim.value,giaPhim.value,anhPhim.value)">Thêm
+                phim</button>
+        </div>
+    </div>
+</div>
