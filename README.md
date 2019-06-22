@@ -33,3 +33,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     + Event Binding
  -Twoway Binding
  - Structual Directive
+ - ngContent => Truyen Nhan Du Lieu
+ - Interaction
+   + Input
+   + Output
+   +ViewChild
+   + View Children
