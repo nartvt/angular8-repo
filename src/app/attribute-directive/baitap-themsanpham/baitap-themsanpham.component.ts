@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { element } from 'protractor';
+
 
 @Component({
   selector: 'app-baitap-themsanpham',
@@ -19,6 +21,7 @@ export class BaitapThemsanphamComponent implements OnInit {
     }
     this.simulatorProducts();
   }
+
   getInfoSanPham(maSanPham, tenSanPham, giaSanPham) {
 
     const newProduct = this.product(maSanPham, tenSanPham, giaSanPham);
