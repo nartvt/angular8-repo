@@ -1,20 +1,19 @@
 <form action="#" >
-  <div class="col-4">
+  <div class="col-4" style="display: flex">
     <div class="form-group">
       <label>Ma San Pham</label>
       <input type="text" class="form-control" id="masp" #mSanPham>
     </div>
-    <div class="form-group">
+    <div class="form-group" >
       <label>Ten San Pham</label>
-      <input type="text" class="form-control" id="tensp" #tSanPham>
+      <input type="text" class="form-control" id="tensp" #tSanPham >
     </div>
-    <div class="form-group">
+    <div class="form-group" >
       <label>Gia</label>
       <input type="text" class="form-control" id="giasp" #gSanPham>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary"
-    (click)="getInfoSanPham(mSanPham.value,tSanPham.value,gSanPham.value)">Submit</button>
+  <button type="submit" class="btn btn-primary" (click)="getInfoSanPham(mSanPham.value,tSanPham.value,gSanPham.value)">Add</button>
 </form>
 <table class="table">
   <thead>
@@ -26,12 +25,15 @@
     </tr>
   </thead>
   <tbody>
-    <<ng-container  *ngIf="sanPhams!=null">
+    <ng-container  *ngIf="sanPhams!=null">
       <tr *ngFor="let item of sanPhams; let STT = index" [ngClass]="{bgColor: (STT+1)%2===0}">
         <td>{{STT+1}}</td>
         <td>{{item.maSanPham}}</td>
         <td>{{item.tenSanPham}}</td>
         <td>{{item.giaSanPham}}</td>
+        <td> 
+            <button type="submit" class="btn btn-danger" (click)="deleteSanPham(item)">Delete</button>
+        </td>
       </tr>
   </ng-container>
   </tbody>
