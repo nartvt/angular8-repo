@@ -1,1 +1,6 @@
-<input type="button" class="btn ghe" [ngClass]="{daDat:chair.TrangThai,isBooking: bookStatus}" (click)="booking()"   value="{{chair.SoGhe}}">
+<input type="button" 
+class="btn ghe" 
+[ngClass]="{daDat:chair.TrangThai,isBooking: bookStatus}" 
+(click)="booking()"   
+value="{{chair.SoGhe}}"[disabled]="chair.TrangThai">
+

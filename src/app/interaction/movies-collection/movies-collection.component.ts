@@ -1,5 +1,5 @@
 import { Component, OnInit,ViewChildren, QueryList } from '@angular/core';
-import { MoviesItemComponent } from './../movies-item/movies-item.component';
+import { MoviesItemComponent } from '../movies-item/movies-item.component';
 @Component({
   selector: 'app-movies-collection',
   templateUrl: './movies-collection.component.html',

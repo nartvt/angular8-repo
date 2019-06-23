@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, ViewChildren, QueryList } from '@angular/core';
+import { ChairBusComponent } from './../chair-bus/chair-bus.component';
 @Component({
   selector: 'app-chair-bus-collections',
   templateUrl: './chair-bus-collections.component.html',
@@ -43,9 +43,29 @@ export class ChairBusCollectionsComponent implements OnInit {
     { SoGhe: 34, TenGhe: "số 34", Gia: 100, TrangThai: false },
     { SoGhe: 35, TenGhe: "số 35", Gia: 100, TrangThai: false },
   ];
+  mangGheDangDat: any = [];
+  @ViewChildren(ChairBusComponent) tagListItemChair: QueryList<ChairBusComponent>;
   constructor() { }
 
   ngOnInit() {
   }
+  chairBooked(value) {
+    if (value.bookStatus) {
+      this.mangGheDangDat.push(value.chair);
+    } else {
+      let index = this.mangGheDangDat.findIndex(item => {
+        return item.SoGhe === value.chair.SoGhe;
+      });
+      this.mangGheDangDat.splice(index, 1);
 
+    }
+  }
+  deleteBookChair(index,item) {
+    this.mangGheDangDat.splice(index, 1);
+    this.tagListItemChair.map(element => {
+      if (element.chair.SoGhe === item.SoGhe) {
+        element.bookStatus = false;
+      }
+    });
+  }
 }
